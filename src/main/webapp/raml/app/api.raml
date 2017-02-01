@@ -1,0 +1,2216 @@
+#%RAML 0.8
+title: template.springboot.angularjs
+version: "0.0.1"
+baseUri: /
+/changePassword: 
+    displayName: ChangePassword Resource
+    description: ChangePassword Resource
+    post: 
+        description: post
+        responses: 
+            "200": 
+                description: Successful Response
+                body: 
+                    application/json: 
+                        schema: |
+                            {
+                              "type" : "object",
+                              "id" : "urn:jsonschema:app:entity:User",
+                              "properties" : {
+                                "email" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "name" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "id" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "login" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "picture" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "password" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "theme" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                }
+                              }
+                            }
+/changeTheme: 
+    displayName: ChangeTheme Resource
+    description: ChangeTheme Resource
+    post: 
+        description: post
+        responses: 
+            "200": 
+                description: Successful Response
+                body: 
+                    application/json: 
+                        schema: |
+                            {
+                              "type" : "object",
+                              "id" : "urn:jsonschema:app:entity:User",
+                              "properties" : {
+                                "email" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "name" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "id" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "login" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "picture" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "password" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "theme" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                }
+                              }
+                            }
+/auth: 
+    displayName: Auth Resource
+    description: Auth Resource
+    post: 
+        description: authenticationRequest
+        body: 
+            application/x-www-form-urlencoded: 
+                formParameters: 
+                    arg0: 
+                        displayName: arg0
+                        description: arg0
+                        type: string
+                        required: true
+                        repeat: false
+        responses: 
+            "200": 
+                description: Successful Response
+                body: 
+                    application/json: 
+                        schema: |
+                            {
+                              "type" : "any"
+                            }
+    /refresh: 
+        displayName: Refresh Resource
+        description: Refresh Resource
+        get: 
+            description: authenticationRequest
+            responses: 
+                "200": 
+                    description: Successful Response
+                    body: 
+                        application/json: 
+                            schema: |
+                                {
+                                  "type" : "any"
+                                }
+/api: 
+    displayName: Api Resource
+    description: Api Resource
+    /security: 
+        displayName: Security Resource
+        description: Security Resource
+        /Role: 
+            displayName: Role Resource
+            description: Role Resource
+            post: 
+                description: |
+                    Serviço exposto para novo registro de acordo com a entidade fornecida
+                     
+                     @generated
+                body: 
+                    application/json: 
+                        schema: |
+                            {
+                              "type" : "object",
+                              "id" : "urn:jsonschema:app:entity:Role",
+                              "properties" : {
+                                "name" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "id" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                }
+                              }
+                            }
+                responses: 
+                    "200": 
+                        description: Successful Response
+                        body: 
+                            application/json: 
+                                schema: |
+                                    {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:app:entity:Role",
+                                      "properties" : {
+                                        "name" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "id" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        }
+                                      }
+                                    }
+            get: 
+                description: |
+                    NamedQuery list
+                     @generated
+                responses: 
+                    "200": 
+                        description: Successful Response
+                        body: 
+                            application/json: 
+                                schema: |
+                                    {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:org:springframework:http:HttpEntity<org:springframework:hateoas:PagedResources<app:entity:Role>>",
+                                      "properties" : {
+                                        "headers" : {
+                                          "type" : "object",
+                                          "additionalProperties" : {
+                                            "type" : "array",
+                                            "items" : {
+                                              "type" : "string"
+                                            }
+                                          }
+                                        },
+                                        "body" : {
+                                          "type" : "object",
+                                          "$ref" : "urn:jsonschema:org:springframework:hateoas:PagedResources<app:entity:Role>"
+                                        }
+                                      }
+                                    }
+            put: 
+                description: |
+                    Serviço exposto para salvar alterações de acordo com a entidade fornecida
+                     
+                     @generated
+                body: 
+                    application/json: 
+                        schema: |
+                            {
+                              "type" : "object",
+                              "id" : "urn:jsonschema:app:entity:Role",
+                              "properties" : {
+                                "name" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "id" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                }
+                              }
+                            }
+                responses: 
+                    "200": 
+                        description: Successful Response
+                        body: 
+                            application/json: 
+                                schema: |
+                                    {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:app:entity:Role",
+                                      "properties" : {
+                                        "name" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "id" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        }
+                                      }
+                                    }
+            /{instanceId}: 
+                displayName: A specific instanceId
+                description: "{instanceId} Resource"
+                uriParameters: 
+                    instanceId: 
+                        displayName: instanceId
+                        type: string
+                        required: true
+                        repeat: false
+                /User: 
+                    displayName: User Resource
+                    description: User Resource
+                    get: 
+                        description: |
+                            ManyToMany Relationship GET
+                             @generated
+                        responses: 
+                            "200": 
+                                description: Successful Response
+                                body: 
+                                    application/json: 
+                                        schema: |
+                                            {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:org:springframework:http:HttpEntity<org:springframework:hateoas:PagedResources<app:entity:User>>",
+                                              "properties" : {
+                                                "headers" : {
+                                                  "type" : "object",
+                                                  "additionalProperties" : {
+                                                    "type" : "array",
+                                                    "items" : {
+                                                      "type" : "string"
+                                                    }
+                                                  }
+                                                },
+                                                "body" : {
+                                                  "type" : "object",
+                                                  "$ref" : "urn:jsonschema:org:springframework:hateoas:PagedResources<app:entity:User>"
+                                                }
+                                              }
+                                            }
+                    post: 
+                        description: |
+                            ManyToMany Relationship POST
+                             @generated
+                        body: 
+                            application/json: 
+                                schema: |
+                                    {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:app:entity:User",
+                                      "properties" : {
+                                        "email" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "name" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "id" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "login" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "picture" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "password" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "theme" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        }
+                                      }
+                                    }
+                        responses: 
+                            "200": 
+                                description: Successful Response
+                                body: 
+                                    application/json: 
+                                        schema: |
+                                            {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:app:entity:Role",
+                                              "properties" : {
+                                                "name" : {
+                                                  "type" : "string",
+                                                  "description" : "@generated"
+                                                },
+                                                "id" : {
+                                                  "type" : "string",
+                                                  "description" : "@generated"
+                                                }
+                                              }
+                                            }
+                    /{relationId}: 
+                        displayName: A specific relationId
+                        description: "{relationId} Resource"
+                        uriParameters: 
+                            relationId: 
+                                displayName: relationId
+                                type: string
+                                required: true
+                                repeat: false
+                        delete: 
+                            description: |
+                                ManyToMany Relationship DELETE
+                                 @generated
+                            responses: 
+                                "200": 
+                                    description: Successful Response
+                                    body: 
+                                        application/json: 
+                                            schema: |
+                                                {
+                                                  "type" : "null"
+                                                }
+                /UserRole: 
+                    displayName: UserRole Resource
+                    description: UserRole Resource
+                    post: 
+                        description: |
+                            OneToMany Relationship POST
+                             @generated
+                        body: 
+                            application/json: 
+                                schema: |
+                                    {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:app:entity:UserRole",
+                                      "properties" : {
+                                        "id" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "user" : {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:User",
+                                          "description" : "@generated",
+                                          "properties" : {
+                                            "email" : {
+                                              "type" : "string"
+                                            },
+                                            "name" : {
+                                              "type" : "string"
+                                            },
+                                            "id" : {
+                                              "type" : "string"
+                                            },
+                                            "login" : {
+                                              "type" : "string"
+                                            },
+                                            "picture" : {
+                                              "type" : "string"
+                                            },
+                                            "password" : {
+                                              "type" : "string"
+                                            },
+                                            "theme" : {
+                                              "type" : "string"
+                                            }
+                                          }
+                                        },
+                                        "role" : {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:Role",
+                                          "description" : "@generated",
+                                          "properties" : {
+                                            "name" : {
+                                              "type" : "string"
+                                            },
+                                            "id" : {
+                                              "type" : "string"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                        responses: 
+                            "200": 
+                                description: Successful Response
+                                body: 
+                                    application/json: 
+                                        schema: |
+                                            {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:app:entity:UserRole",
+                                              "properties" : {
+                                                "id" : {
+                                                  "type" : "string",
+                                                  "description" : "@generated"
+                                                },
+                                                "user" : {
+                                                  "type" : "object",
+                                                  "id" : "urn:jsonschema:app:entity:User",
+                                                  "description" : "@generated",
+                                                  "properties" : {
+                                                    "email" : {
+                                                      "type" : "string"
+                                                    },
+                                                    "name" : {
+                                                      "type" : "string"
+                                                    },
+                                                    "id" : {
+                                                      "type" : "string"
+                                                    },
+                                                    "login" : {
+                                                      "type" : "string"
+                                                    },
+                                                    "picture" : {
+                                                      "type" : "string"
+                                                    },
+                                                    "password" : {
+                                                      "type" : "string"
+                                                    },
+                                                    "theme" : {
+                                                      "type" : "string"
+                                                    }
+                                                  }
+                                                },
+                                                "role" : {
+                                                  "type" : "object",
+                                                  "id" : "urn:jsonschema:app:entity:Role",
+                                                  "description" : "@generated",
+                                                  "properties" : {
+                                                    "name" : {
+                                                      "type" : "string"
+                                                    },
+                                                    "id" : {
+                                                      "type" : "string"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                    get: 
+                        description: |
+                            OneToMany Relationship GET
+                             @generated
+                        responses: 
+                            "200": 
+                                description: Successful Response
+                                body: 
+                                    application/json: 
+                                        schema: |
+                                            {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:org:springframework:http:HttpEntity<org:springframework:hateoas:PagedResources<app:entity:UserRole>>",
+                                              "properties" : {
+                                                "headers" : {
+                                                  "type" : "object",
+                                                  "additionalProperties" : {
+                                                    "type" : "array",
+                                                    "items" : {
+                                                      "type" : "string"
+                                                    }
+                                                  }
+                                                },
+                                                "body" : {
+                                                  "type" : "object",
+                                                  "$ref" : "urn:jsonschema:org:springframework:hateoas:PagedResources<app:entity:UserRole>"
+                                                }
+                                              }
+                                            }
+                    /{relationId}: 
+                        displayName: A specific relationId
+                        description: "{relationId} Resource"
+                        uriParameters: 
+                            relationId: 
+                                displayName: relationId
+                                type: string
+                                required: true
+                                repeat: false
+                        delete: 
+                            description: |
+                                OneToMany Relationship DELETE 
+                                 @generated
+                            responses: 
+                                "200": 
+                                    description: Successful Response
+                                    body: 
+                                        application/json: 
+                                            schema: |
+                                                {
+                                                  "type" : "null"
+                                                }
+                        put: 
+                            description: |
+                                OneToMany Relationship PUT
+                                 @generated
+                            body: 
+                                application/json: 
+                                    schema: |
+                                        {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:UserRole",
+                                          "properties" : {
+                                            "id" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "user" : {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:app:entity:User",
+                                              "description" : "@generated",
+                                              "properties" : {
+                                                "email" : {
+                                                  "type" : "string"
+                                                },
+                                                "name" : {
+                                                  "type" : "string"
+                                                },
+                                                "id" : {
+                                                  "type" : "string"
+                                                },
+                                                "login" : {
+                                                  "type" : "string"
+                                                },
+                                                "picture" : {
+                                                  "type" : "string"
+                                                },
+                                                "password" : {
+                                                  "type" : "string"
+                                                },
+                                                "theme" : {
+                                                  "type" : "string"
+                                                }
+                                              }
+                                            },
+                                            "role" : {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:app:entity:Role",
+                                              "description" : "@generated",
+                                              "properties" : {
+                                                "name" : {
+                                                  "type" : "string"
+                                                },
+                                                "id" : {
+                                                  "type" : "string"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                            responses: 
+                                "200": 
+                                    description: Successful Response
+                                    body: 
+                                        application/json: 
+                                            schema: |
+                                                {
+                                                  "type" : "object",
+                                                  "id" : "urn:jsonschema:app:entity:UserRole",
+                                                  "properties" : {
+                                                    "id" : {
+                                                      "type" : "string",
+                                                      "description" : "@generated"
+                                                    },
+                                                    "user" : {
+                                                      "type" : "object",
+                                                      "id" : "urn:jsonschema:app:entity:User",
+                                                      "description" : "@generated",
+                                                      "properties" : {
+                                                        "email" : {
+                                                          "type" : "string"
+                                                        },
+                                                        "name" : {
+                                                          "type" : "string"
+                                                        },
+                                                        "id" : {
+                                                          "type" : "string"
+                                                        },
+                                                        "login" : {
+                                                          "type" : "string"
+                                                        },
+                                                        "picture" : {
+                                                          "type" : "string"
+                                                        },
+                                                        "password" : {
+                                                          "type" : "string"
+                                                        },
+                                                        "theme" : {
+                                                          "type" : "string"
+                                                        }
+                                                      }
+                                                    },
+                                                    "role" : {
+                                                      "type" : "object",
+                                                      "id" : "urn:jsonschema:app:entity:Role",
+                                                      "description" : "@generated",
+                                                      "properties" : {
+                                                        "name" : {
+                                                          "type" : "string"
+                                                        },
+                                                        "id" : {
+                                                          "type" : "string"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+            /{id}: 
+                displayName: A specific id
+                description: "{id} Resource"
+                uriParameters: 
+                    id: 
+                        displayName: id
+                        type: string
+                        required: true
+                        repeat: false
+                get: 
+                    description: |
+                        Serviço exposto para recuperar a entidade de acordo com o id fornecido
+                         
+                         @generated
+                    responses: 
+                        "200": 
+                            description: Successful Response
+                            body: 
+                                application/json: 
+                                    schema: |
+                                        {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:Role",
+                                          "properties" : {
+                                            "name" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "id" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            }
+                                          }
+                                        }
+                put: 
+                    description: |
+                        Serviço exposto para salvar alterações de acordo com a entidade e id fornecidos
+                         
+                         @generated
+                    body: 
+                        application/json: 
+                            schema: |
+                                {
+                                  "type" : "object",
+                                  "id" : "urn:jsonschema:app:entity:Role",
+                                  "properties" : {
+                                    "name" : {
+                                      "type" : "string",
+                                      "description" : "@generated"
+                                    },
+                                    "id" : {
+                                      "type" : "string",
+                                      "description" : "@generated"
+                                    }
+                                  }
+                                }
+                    responses: 
+                        "200": 
+                            description: Successful Response
+                            body: 
+                                application/json: 
+                                    schema: |
+                                        {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:Role",
+                                          "properties" : {
+                                            "name" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "id" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            }
+                                          }
+                                        }
+                delete: 
+                    description: |
+                        Serviço exposto para remover a entidade de acordo com o id fornecido
+                         
+                         @generated
+                    responses: 
+                        "200": 
+                            description: Successful Response
+                            body: 
+                                application/json: 
+                                    schema: |
+                                        {
+                                          "type" : "null"
+                                        }
+        /User: 
+            displayName: User Resource
+            description: User Resource
+            post: 
+                description: |
+                    Serviço exposto para novo registro de acordo com a entidade fornecida
+                     
+                     @generated
+                body: 
+                    application/json: 
+                        schema: |
+                            {
+                              "type" : "object",
+                              "id" : "urn:jsonschema:app:entity:User",
+                              "properties" : {
+                                "email" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "name" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "id" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "login" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "picture" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "password" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "theme" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                }
+                              }
+                            }
+                responses: 
+                    "200": 
+                        description: Successful Response
+                        body: 
+                            application/json: 
+                                schema: |
+                                    {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:app:entity:User",
+                                      "properties" : {
+                                        "email" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "name" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "id" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "login" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "picture" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "password" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "theme" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        }
+                                      }
+                                    }
+            get: 
+                description: |
+                    NamedQuery list
+                     @generated
+                responses: 
+                    "200": 
+                        description: Successful Response
+                        body: 
+                            application/json: 
+                                schema: |
+                                    {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:org:springframework:http:HttpEntity<org:springframework:hateoas:PagedResources<app:entity:User>>",
+                                      "properties" : {
+                                        "headers" : {
+                                          "type" : "object",
+                                          "additionalProperties" : {
+                                            "type" : "array",
+                                            "items" : {
+                                              "type" : "string"
+                                            }
+                                          }
+                                        },
+                                        "body" : {
+                                          "type" : "object",
+                                          "$ref" : "urn:jsonschema:org:springframework:hateoas:PagedResources<app:entity:User>"
+                                        }
+                                      }
+                                    }
+            put: 
+                description: |
+                    Serviço exposto para salvar alterações de acordo com a entidade fornecida
+                     
+                     @generated
+                body: 
+                    application/json: 
+                        schema: |
+                            {
+                              "type" : "object",
+                              "id" : "urn:jsonschema:app:entity:User",
+                              "properties" : {
+                                "email" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "name" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "id" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "login" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "picture" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "password" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "theme" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                }
+                              }
+                            }
+                responses: 
+                    "200": 
+                        description: Successful Response
+                        body: 
+                            application/json: 
+                                schema: |
+                                    {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:app:entity:User",
+                                      "properties" : {
+                                        "email" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "name" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "id" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "login" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "picture" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "password" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "theme" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        }
+                                      }
+                                    }
+            /{instanceId}: 
+                displayName: A specific instanceId
+                description: "{instanceId} Resource"
+                uriParameters: 
+                    instanceId: 
+                        displayName: instanceId
+                        type: string
+                        required: true
+                        repeat: false
+                /Role: 
+                    displayName: Role Resource
+                    description: Role Resource
+                    get: 
+                        description: |
+                            ManyToMany Relationship GET
+                             @generated
+                        responses: 
+                            "200": 
+                                description: Successful Response
+                                body: 
+                                    application/json: 
+                                        schema: |
+                                            {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:org:springframework:http:HttpEntity<org:springframework:hateoas:PagedResources<app:entity:Role>>",
+                                              "properties" : {
+                                                "headers" : {
+                                                  "type" : "object",
+                                                  "additionalProperties" : {
+                                                    "type" : "array",
+                                                    "items" : {
+                                                      "type" : "string"
+                                                    }
+                                                  }
+                                                },
+                                                "body" : {
+                                                  "type" : "object",
+                                                  "$ref" : "urn:jsonschema:org:springframework:hateoas:PagedResources<app:entity:Role>"
+                                                }
+                                              }
+                                            }
+                    post: 
+                        description: |
+                            ManyToMany Relationship POST
+                             @generated
+                        body: 
+                            application/json: 
+                                schema: |
+                                    {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:app:entity:Role",
+                                      "properties" : {
+                                        "name" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "id" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        }
+                                      }
+                                    }
+                        responses: 
+                            "200": 
+                                description: Successful Response
+                                body: 
+                                    application/json: 
+                                        schema: |
+                                            {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:app:entity:User",
+                                              "properties" : {
+                                                "email" : {
+                                                  "type" : "string",
+                                                  "description" : "@generated"
+                                                },
+                                                "name" : {
+                                                  "type" : "string",
+                                                  "description" : "@generated"
+                                                },
+                                                "id" : {
+                                                  "type" : "string",
+                                                  "description" : "@generated"
+                                                },
+                                                "login" : {
+                                                  "type" : "string",
+                                                  "description" : "@generated"
+                                                },
+                                                "picture" : {
+                                                  "type" : "string",
+                                                  "description" : "@generated"
+                                                },
+                                                "password" : {
+                                                  "type" : "string",
+                                                  "description" : "@generated"
+                                                },
+                                                "theme" : {
+                                                  "type" : "string",
+                                                  "description" : "@generated"
+                                                }
+                                              }
+                                            }
+                    /{relationId}: 
+                        displayName: A specific relationId
+                        description: "{relationId} Resource"
+                        uriParameters: 
+                            relationId: 
+                                displayName: relationId
+                                type: string
+                                required: true
+                                repeat: false
+                        delete: 
+                            description: |
+                                ManyToMany Relationship DELETE
+                                 @generated
+                            responses: 
+                                "200": 
+                                    description: Successful Response
+                                    body: 
+                                        application/json: 
+                                            schema: |
+                                                {
+                                                  "type" : "null"
+                                                }
+                /UserRole: 
+                    displayName: UserRole Resource
+                    description: UserRole Resource
+                    post: 
+                        description: |
+                            OneToMany Relationship POST
+                             @generated
+                        body: 
+                            application/json: 
+                                schema: |
+                                    {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:app:entity:UserRole",
+                                      "properties" : {
+                                        "id" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "user" : {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:User",
+                                          "description" : "@generated",
+                                          "properties" : {
+                                            "email" : {
+                                              "type" : "string"
+                                            },
+                                            "name" : {
+                                              "type" : "string"
+                                            },
+                                            "id" : {
+                                              "type" : "string"
+                                            },
+                                            "login" : {
+                                              "type" : "string"
+                                            },
+                                            "picture" : {
+                                              "type" : "string"
+                                            },
+                                            "password" : {
+                                              "type" : "string"
+                                            },
+                                            "theme" : {
+                                              "type" : "string"
+                                            }
+                                          }
+                                        },
+                                        "role" : {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:Role",
+                                          "description" : "@generated",
+                                          "properties" : {
+                                            "name" : {
+                                              "type" : "string"
+                                            },
+                                            "id" : {
+                                              "type" : "string"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                        responses: 
+                            "200": 
+                                description: Successful Response
+                                body: 
+                                    application/json: 
+                                        schema: |
+                                            {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:app:entity:UserRole",
+                                              "properties" : {
+                                                "id" : {
+                                                  "type" : "string",
+                                                  "description" : "@generated"
+                                                },
+                                                "user" : {
+                                                  "type" : "object",
+                                                  "id" : "urn:jsonschema:app:entity:User",
+                                                  "description" : "@generated",
+                                                  "properties" : {
+                                                    "email" : {
+                                                      "type" : "string"
+                                                    },
+                                                    "name" : {
+                                                      "type" : "string"
+                                                    },
+                                                    "id" : {
+                                                      "type" : "string"
+                                                    },
+                                                    "login" : {
+                                                      "type" : "string"
+                                                    },
+                                                    "picture" : {
+                                                      "type" : "string"
+                                                    },
+                                                    "password" : {
+                                                      "type" : "string"
+                                                    },
+                                                    "theme" : {
+                                                      "type" : "string"
+                                                    }
+                                                  }
+                                                },
+                                                "role" : {
+                                                  "type" : "object",
+                                                  "id" : "urn:jsonschema:app:entity:Role",
+                                                  "description" : "@generated",
+                                                  "properties" : {
+                                                    "name" : {
+                                                      "type" : "string"
+                                                    },
+                                                    "id" : {
+                                                      "type" : "string"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                    get: 
+                        description: |
+                            OneToMany Relationship GET
+                             @generated
+                        responses: 
+                            "200": 
+                                description: Successful Response
+                                body: 
+                                    application/json: 
+                                        schema: |
+                                            {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:org:springframework:http:HttpEntity<org:springframework:hateoas:PagedResources<app:entity:UserRole>>",
+                                              "properties" : {
+                                                "headers" : {
+                                                  "type" : "object",
+                                                  "additionalProperties" : {
+                                                    "type" : "array",
+                                                    "items" : {
+                                                      "type" : "string"
+                                                    }
+                                                  }
+                                                },
+                                                "body" : {
+                                                  "type" : "object",
+                                                  "$ref" : "urn:jsonschema:org:springframework:hateoas:PagedResources<app:entity:UserRole>"
+                                                }
+                                              }
+                                            }
+                    /{relationId}: 
+                        displayName: A specific relationId
+                        description: "{relationId} Resource"
+                        uriParameters: 
+                            relationId: 
+                                displayName: relationId
+                                type: string
+                                required: true
+                                repeat: false
+                        delete: 
+                            description: |
+                                OneToMany Relationship DELETE 
+                                 @generated
+                            responses: 
+                                "200": 
+                                    description: Successful Response
+                                    body: 
+                                        application/json: 
+                                            schema: |
+                                                {
+                                                  "type" : "null"
+                                                }
+                        put: 
+                            description: |
+                                OneToMany Relationship PUT
+                                 @generated
+                            body: 
+                                application/json: 
+                                    schema: |
+                                        {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:UserRole",
+                                          "properties" : {
+                                            "id" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "user" : {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:app:entity:User",
+                                              "description" : "@generated",
+                                              "properties" : {
+                                                "email" : {
+                                                  "type" : "string"
+                                                },
+                                                "name" : {
+                                                  "type" : "string"
+                                                },
+                                                "id" : {
+                                                  "type" : "string"
+                                                },
+                                                "login" : {
+                                                  "type" : "string"
+                                                },
+                                                "picture" : {
+                                                  "type" : "string"
+                                                },
+                                                "password" : {
+                                                  "type" : "string"
+                                                },
+                                                "theme" : {
+                                                  "type" : "string"
+                                                }
+                                              }
+                                            },
+                                            "role" : {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:app:entity:Role",
+                                              "description" : "@generated",
+                                              "properties" : {
+                                                "name" : {
+                                                  "type" : "string"
+                                                },
+                                                "id" : {
+                                                  "type" : "string"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                            responses: 
+                                "200": 
+                                    description: Successful Response
+                                    body: 
+                                        application/json: 
+                                            schema: |
+                                                {
+                                                  "type" : "object",
+                                                  "id" : "urn:jsonschema:app:entity:UserRole",
+                                                  "properties" : {
+                                                    "id" : {
+                                                      "type" : "string",
+                                                      "description" : "@generated"
+                                                    },
+                                                    "user" : {
+                                                      "type" : "object",
+                                                      "id" : "urn:jsonschema:app:entity:User",
+                                                      "description" : "@generated",
+                                                      "properties" : {
+                                                        "email" : {
+                                                          "type" : "string"
+                                                        },
+                                                        "name" : {
+                                                          "type" : "string"
+                                                        },
+                                                        "id" : {
+                                                          "type" : "string"
+                                                        },
+                                                        "login" : {
+                                                          "type" : "string"
+                                                        },
+                                                        "picture" : {
+                                                          "type" : "string"
+                                                        },
+                                                        "password" : {
+                                                          "type" : "string"
+                                                        },
+                                                        "theme" : {
+                                                          "type" : "string"
+                                                        }
+                                                      }
+                                                    },
+                                                    "role" : {
+                                                      "type" : "object",
+                                                      "id" : "urn:jsonschema:app:entity:Role",
+                                                      "description" : "@generated",
+                                                      "properties" : {
+                                                        "name" : {
+                                                          "type" : "string"
+                                                        },
+                                                        "id" : {
+                                                          "type" : "string"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+            /findByRole: 
+                displayName: FindByRole Resource
+                description: FindByRole Resource
+                /{roleid}: 
+                    displayName: A specific roleid
+                    description: "{roleid} Resource"
+                    uriParameters: 
+                        roleid: 
+                            displayName: roleid
+                            type: string
+                            required: true
+                            repeat: false
+                    get: 
+                        description: |
+                            NamedQuery findByRole
+                             @generated
+                        responses: 
+                            "200": 
+                                description: Successful Response
+                                body: 
+                                    application/json: 
+                                        schema: |
+                                            {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:org:springframework:http:HttpEntity<org:springframework:hateoas:PagedResources<app:entity:User>>",
+                                              "properties" : {
+                                                "headers" : {
+                                                  "type" : "object",
+                                                  "additionalProperties" : {
+                                                    "type" : "array",
+                                                    "items" : {
+                                                      "type" : "string"
+                                                    }
+                                                  }
+                                                },
+                                                "body" : {
+                                                  "type" : "object",
+                                                  "$ref" : "urn:jsonschema:org:springframework:hateoas:PagedResources<app:entity:User>"
+                                                }
+                                              }
+                                            }
+            /findByLogin: 
+                displayName: FindByLogin Resource
+                description: FindByLogin Resource
+                /{login}: 
+                    displayName: A specific login
+                    description: "{login} Resource"
+                    uriParameters: 
+                        login: 
+                            displayName: login
+                            type: string
+                            required: true
+                            repeat: false
+                    get: 
+                        description: |
+                            NamedQuery findByLogin
+                             @generated
+                        responses: 
+                            "200": 
+                                description: Successful Response
+                                body: 
+                                    application/json: 
+                                        schema: |
+                                            {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:org:springframework:http:HttpEntity<org:springframework:hateoas:PagedResources<app:entity:User>>",
+                                              "properties" : {
+                                                "headers" : {
+                                                  "type" : "object",
+                                                  "additionalProperties" : {
+                                                    "type" : "array",
+                                                    "items" : {
+                                                      "type" : "string"
+                                                    }
+                                                  }
+                                                },
+                                                "body" : {
+                                                  "type" : "object",
+                                                  "$ref" : "urn:jsonschema:org:springframework:hateoas:PagedResources<app:entity:User>"
+                                                }
+                                              }
+                                            }
+            /{id}: 
+                displayName: A specific id
+                description: "{id} Resource"
+                uriParameters: 
+                    id: 
+                        displayName: id
+                        type: string
+                        required: true
+                        repeat: false
+                get: 
+                    description: |
+                        Serviço exposto para recuperar a entidade de acordo com o id fornecido
+                         
+                         @generated
+                    responses: 
+                        "200": 
+                            description: Successful Response
+                            body: 
+                                application/json: 
+                                    schema: |
+                                        {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:User",
+                                          "properties" : {
+                                            "email" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "name" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "id" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "login" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "picture" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "password" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "theme" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            }
+                                          }
+                                        }
+                put: 
+                    description: |
+                        Serviço exposto para salvar alterações de acordo com a entidade e id fornecidos
+                         
+                         @generated
+                    body: 
+                        application/json: 
+                            schema: |
+                                {
+                                  "type" : "object",
+                                  "id" : "urn:jsonschema:app:entity:User",
+                                  "properties" : {
+                                    "email" : {
+                                      "type" : "string",
+                                      "description" : "@generated"
+                                    },
+                                    "name" : {
+                                      "type" : "string",
+                                      "description" : "@generated"
+                                    },
+                                    "id" : {
+                                      "type" : "string",
+                                      "description" : "@generated"
+                                    },
+                                    "login" : {
+                                      "type" : "string",
+                                      "description" : "@generated"
+                                    },
+                                    "picture" : {
+                                      "type" : "string",
+                                      "description" : "@generated"
+                                    },
+                                    "password" : {
+                                      "type" : "string",
+                                      "description" : "@generated"
+                                    },
+                                    "theme" : {
+                                      "type" : "string",
+                                      "description" : "@generated"
+                                    }
+                                  }
+                                }
+                    responses: 
+                        "200": 
+                            description: Successful Response
+                            body: 
+                                application/json: 
+                                    schema: |
+                                        {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:User",
+                                          "properties" : {
+                                            "email" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "name" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "id" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "login" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "picture" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "password" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "theme" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            }
+                                          }
+                                        }
+                delete: 
+                    description: |
+                        Serviço exposto para remover a entidade de acordo com o id fornecido
+                         
+                         @generated
+                    responses: 
+                        "200": 
+                            description: Successful Response
+                            body: 
+                                application/json: 
+                                    schema: |
+                                        {
+                                          "type" : "null"
+                                        }
+        /UserRole: 
+            displayName: UserRole Resource
+            description: UserRole Resource
+            post: 
+                description: |
+                    Serviço exposto para novo registro de acordo com a entidade fornecida
+                     
+                     @generated
+                body: 
+                    application/json: 
+                        schema: |
+                            {
+                              "type" : "object",
+                              "id" : "urn:jsonschema:app:entity:UserRole",
+                              "properties" : {
+                                "id" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "user" : {
+                                  "type" : "object",
+                                  "id" : "urn:jsonschema:app:entity:User",
+                                  "description" : "@generated",
+                                  "properties" : {
+                                    "email" : {
+                                      "type" : "string"
+                                    },
+                                    "name" : {
+                                      "type" : "string"
+                                    },
+                                    "id" : {
+                                      "type" : "string"
+                                    },
+                                    "login" : {
+                                      "type" : "string"
+                                    },
+                                    "picture" : {
+                                      "type" : "string"
+                                    },
+                                    "password" : {
+                                      "type" : "string"
+                                    },
+                                    "theme" : {
+                                      "type" : "string"
+                                    }
+                                  }
+                                },
+                                "role" : {
+                                  "type" : "object",
+                                  "id" : "urn:jsonschema:app:entity:Role",
+                                  "description" : "@generated",
+                                  "properties" : {
+                                    "name" : {
+                                      "type" : "string"
+                                    },
+                                    "id" : {
+                                      "type" : "string"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                responses: 
+                    "200": 
+                        description: Successful Response
+                        body: 
+                            application/json: 
+                                schema: |
+                                    {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:app:entity:UserRole",
+                                      "properties" : {
+                                        "id" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "user" : {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:User",
+                                          "description" : "@generated",
+                                          "properties" : {
+                                            "email" : {
+                                              "type" : "string"
+                                            },
+                                            "name" : {
+                                              "type" : "string"
+                                            },
+                                            "id" : {
+                                              "type" : "string"
+                                            },
+                                            "login" : {
+                                              "type" : "string"
+                                            },
+                                            "picture" : {
+                                              "type" : "string"
+                                            },
+                                            "password" : {
+                                              "type" : "string"
+                                            },
+                                            "theme" : {
+                                              "type" : "string"
+                                            }
+                                          }
+                                        },
+                                        "role" : {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:Role",
+                                          "description" : "@generated",
+                                          "properties" : {
+                                            "name" : {
+                                              "type" : "string"
+                                            },
+                                            "id" : {
+                                              "type" : "string"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+            get: 
+                description: |
+                    NamedQuery list
+                     @generated
+                responses: 
+                    "200": 
+                        description: Successful Response
+                        body: 
+                            application/json: 
+                                schema: |
+                                    {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:org:springframework:http:HttpEntity<org:springframework:hateoas:PagedResources<app:entity:UserRole>>",
+                                      "properties" : {
+                                        "headers" : {
+                                          "type" : "object",
+                                          "additionalProperties" : {
+                                            "type" : "array",
+                                            "items" : {
+                                              "type" : "string"
+                                            }
+                                          }
+                                        },
+                                        "body" : {
+                                          "type" : "object",
+                                          "$ref" : "urn:jsonschema:org:springframework:hateoas:PagedResources<app:entity:UserRole>"
+                                        }
+                                      }
+                                    }
+            put: 
+                description: |
+                    Serviço exposto para salvar alterações de acordo com a entidade fornecida
+                     
+                     @generated
+                body: 
+                    application/json: 
+                        schema: |
+                            {
+                              "type" : "object",
+                              "id" : "urn:jsonschema:app:entity:UserRole",
+                              "properties" : {
+                                "id" : {
+                                  "type" : "string",
+                                  "description" : "@generated"
+                                },
+                                "user" : {
+                                  "type" : "object",
+                                  "id" : "urn:jsonschema:app:entity:User",
+                                  "description" : "@generated",
+                                  "properties" : {
+                                    "email" : {
+                                      "type" : "string"
+                                    },
+                                    "name" : {
+                                      "type" : "string"
+                                    },
+                                    "id" : {
+                                      "type" : "string"
+                                    },
+                                    "login" : {
+                                      "type" : "string"
+                                    },
+                                    "picture" : {
+                                      "type" : "string"
+                                    },
+                                    "password" : {
+                                      "type" : "string"
+                                    },
+                                    "theme" : {
+                                      "type" : "string"
+                                    }
+                                  }
+                                },
+                                "role" : {
+                                  "type" : "object",
+                                  "id" : "urn:jsonschema:app:entity:Role",
+                                  "description" : "@generated",
+                                  "properties" : {
+                                    "name" : {
+                                      "type" : "string"
+                                    },
+                                    "id" : {
+                                      "type" : "string"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                responses: 
+                    "200": 
+                        description: Successful Response
+                        body: 
+                            application/json: 
+                                schema: |
+                                    {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:app:entity:UserRole",
+                                      "properties" : {
+                                        "id" : {
+                                          "type" : "string",
+                                          "description" : "@generated"
+                                        },
+                                        "user" : {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:User",
+                                          "description" : "@generated",
+                                          "properties" : {
+                                            "email" : {
+                                              "type" : "string"
+                                            },
+                                            "name" : {
+                                              "type" : "string"
+                                            },
+                                            "id" : {
+                                              "type" : "string"
+                                            },
+                                            "login" : {
+                                              "type" : "string"
+                                            },
+                                            "picture" : {
+                                              "type" : "string"
+                                            },
+                                            "password" : {
+                                              "type" : "string"
+                                            },
+                                            "theme" : {
+                                              "type" : "string"
+                                            }
+                                          }
+                                        },
+                                        "role" : {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:Role",
+                                          "description" : "@generated",
+                                          "properties" : {
+                                            "name" : {
+                                              "type" : "string"
+                                            },
+                                            "id" : {
+                                              "type" : "string"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+            /findByRole: 
+                displayName: FindByRole Resource
+                description: FindByRole Resource
+                /{roleid}: 
+                    displayName: A specific roleid
+                    description: "{roleid} Resource"
+                    uriParameters: 
+                        roleid: 
+                            displayName: roleid
+                            type: string
+                            required: true
+                            repeat: false
+                    get: 
+                        description: |
+                            NamedQuery findByRole
+                             @generated
+                        responses: 
+                            "200": 
+                                description: Successful Response
+                                body: 
+                                    application/json: 
+                                        schema: |
+                                            {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:org:springframework:http:HttpEntity<org:springframework:hateoas:PagedResources<app:entity:UserRole>>",
+                                              "properties" : {
+                                                "headers" : {
+                                                  "type" : "object",
+                                                  "additionalProperties" : {
+                                                    "type" : "array",
+                                                    "items" : {
+                                                      "type" : "string"
+                                                    }
+                                                  }
+                                                },
+                                                "body" : {
+                                                  "type" : "object",
+                                                  "$ref" : "urn:jsonschema:org:springframework:hateoas:PagedResources<app:entity:UserRole>"
+                                                }
+                                              }
+                                            }
+            /findByLogin: 
+                displayName: FindByLogin Resource
+                description: FindByLogin Resource
+                /{login}: 
+                    displayName: A specific login
+                    description: "{login} Resource"
+                    uriParameters: 
+                        login: 
+                            displayName: login
+                            type: string
+                            required: true
+                            repeat: false
+                    get: 
+                        description: |
+                            NamedQuery findByLogin
+                             @generated
+                        responses: 
+                            "200": 
+                                description: Successful Response
+                                body: 
+                                    application/json: 
+                                        schema: |
+                                            {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:org:springframework:http:HttpEntity<org:springframework:hateoas:PagedResources<app:entity:UserRole>>",
+                                              "properties" : {
+                                                "headers" : {
+                                                  "type" : "object",
+                                                  "additionalProperties" : {
+                                                    "type" : "array",
+                                                    "items" : {
+                                                      "type" : "string"
+                                                    }
+                                                  }
+                                                },
+                                                "body" : {
+                                                  "type" : "object",
+                                                  "$ref" : "urn:jsonschema:org:springframework:hateoas:PagedResources<app:entity:UserRole>"
+                                                }
+                                              }
+                                            }
+            /findByUser: 
+                displayName: FindByUser Resource
+                description: FindByUser Resource
+                /{user}: 
+                    displayName: A specific user
+                    description: "{user} Resource"
+                    uriParameters: 
+                        user: 
+                            displayName: user
+                            type: string
+                            required: true
+                            repeat: false
+                    get: 
+                        description: |
+                            NamedQuery findByUser
+                             @generated
+                        responses: 
+                            "200": 
+                                description: Successful Response
+                                body: 
+                                    application/json: 
+                                        schema: |
+                                            {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:org:springframework:http:HttpEntity<org:springframework:hateoas:PagedResources<app:entity:UserRole>>",
+                                              "properties" : {
+                                                "headers" : {
+                                                  "type" : "object",
+                                                  "additionalProperties" : {
+                                                    "type" : "array",
+                                                    "items" : {
+                                                      "type" : "string"
+                                                    }
+                                                  }
+                                                },
+                                                "body" : {
+                                                  "type" : "object",
+                                                  "$ref" : "urn:jsonschema:org:springframework:hateoas:PagedResources<app:entity:UserRole>"
+                                                }
+                                              }
+                                            }
+            /findByEmail: 
+                displayName: FindByEmail Resource
+                description: FindByEmail Resource
+                /{email}: 
+                    displayName: A specific email
+                    description: "{email} Resource"
+                    uriParameters: 
+                        email: 
+                            displayName: email
+                            type: string
+                            required: true
+                            repeat: false
+                    get: 
+                        description: |
+                            NamedQuery findByEmail
+                             @generated
+                        responses: 
+                            "200": 
+                                description: Successful Response
+                                body: 
+                                    application/json: 
+                                        schema: |
+                                            {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:org:springframework:http:HttpEntity<org:springframework:hateoas:PagedResources<app:entity:UserRole>>",
+                                              "properties" : {
+                                                "headers" : {
+                                                  "type" : "object",
+                                                  "additionalProperties" : {
+                                                    "type" : "array",
+                                                    "items" : {
+                                                      "type" : "string"
+                                                    }
+                                                  }
+                                                },
+                                                "body" : {
+                                                  "type" : "object",
+                                                  "$ref" : "urn:jsonschema:org:springframework:hateoas:PagedResources<app:entity:UserRole>"
+                                                }
+                                              }
+                                            }
+            /{id}: 
+                displayName: A specific id
+                description: "{id} Resource"
+                uriParameters: 
+                    id: 
+                        displayName: id
+                        type: string
+                        required: true
+                        repeat: false
+                get: 
+                    description: |
+                        Serviço exposto para recuperar a entidade de acordo com o id fornecido
+                         
+                         @generated
+                    responses: 
+                        "200": 
+                            description: Successful Response
+                            body: 
+                                application/json: 
+                                    schema: |
+                                        {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:UserRole",
+                                          "properties" : {
+                                            "id" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "user" : {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:app:entity:User",
+                                              "description" : "@generated",
+                                              "properties" : {
+                                                "email" : {
+                                                  "type" : "string"
+                                                },
+                                                "name" : {
+                                                  "type" : "string"
+                                                },
+                                                "id" : {
+                                                  "type" : "string"
+                                                },
+                                                "login" : {
+                                                  "type" : "string"
+                                                },
+                                                "picture" : {
+                                                  "type" : "string"
+                                                },
+                                                "password" : {
+                                                  "type" : "string"
+                                                },
+                                                "theme" : {
+                                                  "type" : "string"
+                                                }
+                                              }
+                                            },
+                                            "role" : {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:app:entity:Role",
+                                              "description" : "@generated",
+                                              "properties" : {
+                                                "name" : {
+                                                  "type" : "string"
+                                                },
+                                                "id" : {
+                                                  "type" : "string"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                put: 
+                    description: |
+                        Serviço exposto para salvar alterações de acordo com a entidade e id fornecidos
+                         
+                         @generated
+                    body: 
+                        application/json: 
+                            schema: |
+                                {
+                                  "type" : "object",
+                                  "id" : "urn:jsonschema:app:entity:UserRole",
+                                  "properties" : {
+                                    "id" : {
+                                      "type" : "string",
+                                      "description" : "@generated"
+                                    },
+                                    "user" : {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:app:entity:User",
+                                      "description" : "@generated",
+                                      "properties" : {
+                                        "email" : {
+                                          "type" : "string"
+                                        },
+                                        "name" : {
+                                          "type" : "string"
+                                        },
+                                        "id" : {
+                                          "type" : "string"
+                                        },
+                                        "login" : {
+                                          "type" : "string"
+                                        },
+                                        "picture" : {
+                                          "type" : "string"
+                                        },
+                                        "password" : {
+                                          "type" : "string"
+                                        },
+                                        "theme" : {
+                                          "type" : "string"
+                                        }
+                                      }
+                                    },
+                                    "role" : {
+                                      "type" : "object",
+                                      "id" : "urn:jsonschema:app:entity:Role",
+                                      "description" : "@generated",
+                                      "properties" : {
+                                        "name" : {
+                                          "type" : "string"
+                                        },
+                                        "id" : {
+                                          "type" : "string"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                    responses: 
+                        "200": 
+                            description: Successful Response
+                            body: 
+                                application/json: 
+                                    schema: |
+                                        {
+                                          "type" : "object",
+                                          "id" : "urn:jsonschema:app:entity:UserRole",
+                                          "properties" : {
+                                            "id" : {
+                                              "type" : "string",
+                                              "description" : "@generated"
+                                            },
+                                            "user" : {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:app:entity:User",
+                                              "description" : "@generated",
+                                              "properties" : {
+                                                "email" : {
+                                                  "type" : "string"
+                                                },
+                                                "name" : {
+                                                  "type" : "string"
+                                                },
+                                                "id" : {
+                                                  "type" : "string"
+                                                },
+                                                "login" : {
+                                                  "type" : "string"
+                                                },
+                                                "picture" : {
+                                                  "type" : "string"
+                                                },
+                                                "password" : {
+                                                  "type" : "string"
+                                                },
+                                                "theme" : {
+                                                  "type" : "string"
+                                                }
+                                              }
+                                            },
+                                            "role" : {
+                                              "type" : "object",
+                                              "id" : "urn:jsonschema:app:entity:Role",
+                                              "description" : "@generated",
+                                              "properties" : {
+                                                "name" : {
+                                                  "type" : "string"
+                                                },
+                                                "id" : {
+                                                  "type" : "string"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                delete: 
+                    description: |
+                        Serviço exposto para remover a entidade de acordo com o id fornecido
+                         
+                         @generated
+                    responses: 
+                        "200": 
+                            description: Successful Response
+                            body: 
+                                application/json: 
+                                    schema: |
+                                        {
+                                          "type" : "null"
+                                        }
